@@ -16,6 +16,7 @@
 		#size-cells = <0>;
 
 		nios2: cpu@0 {
+			u-boot,dm-pre-reloc; 
 			device_type = "cpu";
 			compatible = "altr,nios2-18.1", "altr,nios2-1.1";
 			reg = <0x00000000>;
@@ -71,7 +72,7 @@
 			gpio-controller;
 		}; //end gpio@8041000 (led)
 	}; //end sopc@0 (sopc0)
-
+/* TODO clk and sdram_clk missing, check */
 	chosen {
 		bootargs = "debug console=ttyAL0,115200";
 	}; //end chosen
