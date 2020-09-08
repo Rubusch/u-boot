@@ -53,10 +53,12 @@ TODO no net
  * -Monitor at top of sdram.
  * -The heap is placed below the monitor
  * -The stack is placed below the heap (&grows down).
-TODO fix up addresses by generated dts and qsys setup
- */
+e.g.
 #define CONFIG_SYS_SDRAM_BASE		0xc8000000
 #define CONFIG_SYS_SDRAM_SIZE		0x08000000
+ */
+#define CONFIG_SYS_SDRAM_BASE		0x04000000
+#define CONFIG_SYS_SDRAM_SIZE		0x04000000
 #define CONFIG_MONITOR_IS_IN_RAM
 #define CONFIG_SYS_MONITOR_LEN		0x80000	/* Reserve 512k */
 #define CONFIG_SYS_MONITOR_BASE	(CONFIG_SYS_SDRAM_BASE + \
@@ -81,7 +83,8 @@ TODO probably no env possible, since no persistent flash, neither nonvolatile ra
  * MISC
 TODO adjust addresses
  */
-#define CONFIG_SYS_LOAD_ADDR		0xcc000000	/* Half of RAM */
+//#define CONFIG_SYS_LOAD_ADDR		0xcc000000	/* Half of RAM */
+#define CONFIG_SYS_LOAD_ADDR		0x08040800
 #define CONFIG_LOADADDR			CONFIG_SYS_LOAD_ADDR
 #define CONFIG_SYS_MEMTEST_START	CONFIG_SYS_SDRAM_BASE
 #define CONFIG_SYS_MEMTEST_END		(CONFIG_SYS_MONITOR_BASE - \
