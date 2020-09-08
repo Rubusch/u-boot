@@ -22,11 +22,12 @@ TODO jtag_uart, if possible
 
 /*
  * Flash
- *
-TODO no flash, setup should run in ramfs, only
-#define CONFIG_SYS_MAX_FLASH_BANKS	1
-#define CONFIG_SYS_MAX_FLASH_SECT	1024
-*/
+ */
+//TODO no flash, setup should run in ramfs, only
+#define CONFIG_SYS_MAX_FLASH_BANKS        0
+//#define CONFIG_SYS_MAX_FLASH_BANKS	1
+//#define CONFIG_SYS_MAX_FLASH_SECT	1024
+
 
 /*
  * NET options
